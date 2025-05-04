@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Market Hub - Help Center</title>
+
+        <style>
+              .pixx{
+                width: 50px;
+                height: 50px;
+                margin-top: -7px;
+            }
+            .foot{
+                width: 100%;
+                height: fit-content;
+                background-color: whitesmoke;
+                padding: 20px 20px;
+                margin: 0px auto;
+            }
+            .review{
+                text-align: center;
+                font-weight: bold;
+                text-transform: uppercase;
+                font-size: 25px;
+                margin-left: 250px;
+                margin-bottom: 20px;
+            }
+            marquee{
+                width: 100%;
+                height: fit-content;
+                /* background-color: red; */
+            }
+
+            .rev p{
+                text-align: center;
+                text-transform: capitalize;
+                font-size: 10px !important;
+                font-weight: light;
+                width: 60%;
+                margin-left: 400px;
+                padding-bottom: 15px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.267);
+            }
+            .own{
+                width: 40px;
+                height: 40px;
+                border-radius: 20px;
+            }
+            @media screen and (max-width:1050px) {
+                .foot{
+                    padding: 20px 0px;
+                }
+                .rev p{
+                    text-align: left;
+                    margin-left: 300px;
+                }
+            }
+
+
+            @media screen and (max-width:820px) {
+                .foot{
+                    padding: 20px 0px;
+                }
+                .rev p{
+                    text-align: left;
+                    margin-left: 250px;
+                }
+            }
+            @media screen and (max-width:767px) {
+                .foot{
+                    padding: 20px 0px;
+                }
+                .rev p{
+                    text-align: left;
+                    margin-left: 50px;
+                }
+                .review{
+                    text-align: left;
+                    margin-left: 60px;
+                }
+            }
+        </style>
+        <!-- CSS FILES -->      
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;700&display=swap" rel="stylesheet">
+
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <link href="css/bootstrap-icons.css" rel="stylesheet">
+
+        <link href="css/tooplate-mini-finance.css" rel="stylesheet">
+<!--
+
+Tooplate 2135 Mini Finance
+
+https://www.tooplate.com/view/2135-mini-finance
+
+Bootstrap 5 Dashboard Admin Template
+
+-->
+    </head>
+    
+    <body>
+        <header class="navbar sticky-top flex-md-nowrap">
+            <div class="col-md-3 col-lg-3 me-0 px-3 fs-6">
+                <a class="navbar-brand" href="index.html">
+                    <img src="hub.png" class="pixx" alt="">
+                    Market Hub
+                </a>
+            </div>
+
+            <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <form class="custom-form header-form ms-lg-3 ms-md-3 me-lg-auto me-md-auto order-2 order-lg-0 order-md-0" action="#" method="get" role="form">
+                <input class="form-control" name="search" type="text" placeholder="Search" aria-label="Search">
+            </form>
+
+            <div class="navbar-nav me-lg-2">
+                <div class="nav-item text-nowrap d-flex align-items-center">
+                    <div class="dropdown ps-3">
+                        <a class="nav-link dropdown-toggle text-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi-bell"></i>
+                            <span class="position-absolute start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                        </a>
+
+                        <ul class="dropdown-menu notifications-block-wrap bg-white shadow">
+                            <small>Notifications</small>
+
+                            <li class="notifications-block border-bottom pb-2 mb-2">
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="notifications-icon-wrap bg-success">
+                                        <i class="notifications-icon bi-check-circle-fill"></i>
+                                    </div>
+
+                                    <div>
+                                        <span>Your account has been created successfuly.</span>
+
+                                        <p></p>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="notifications-block border-bottom pb-2 mb-2">
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="notifications-icon-wrap bg-info">
+                                        <i class="notifications-icon bi-folder"></i>
+                                    </div>
+
+                                    <div>
+                                        <span>Please check. We have sent a Daily report.</span>
+
+                                        <p>10 days ago</p>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="notifications-block">
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="notifications-icon-wrap bg-danger">
+                                        <i class="notifications-icon bi-question-circle"></i>
+                                    </div>
+
+                                    <div>
+                                        <span>Account verification failed.</span>
+
+                                        <p>1 hour ago</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="dropdown ps-1">
+                        <a class="nav-link dropdown-toggle text-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi-three-dots-vertical"></i>
+                        </a>
+
+                        <div class="dropdown-menu dropdown-menu-social bg-white shadow">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4 col-4">
+                                        <a class="dropdown-item text-center" href="#">
+                                            <img src="images/social/search.png" class="profile-image img-fluid" alt="">
+                                            <span class="d-block">Google</span>
+                                        </a>
+                                    </div>
+
+                                    <div class="col-lg-4 col-md-4 col-4">
+                                        <a class="dropdown-item text-center" href="#">
+                                            <img src="images/social/spotify.png" class="profile-image img-fluid" alt="">
+                                            <span class="d-block">Spotify</span>
+                                        </a>
+                                    </div>
+
+                                    <div class="col-lg-4 col-md-4 col-4">
+                                        <a class="dropdown-item text-center" href="#">
+                                            <img src="images/social/telegram.png" class="profile-image img-fluid" alt="">
+                                            <span class="d-block">Telegram</span>
+                                        </a>
+                                    </div>
+
+                                    <div class="col-lg-4 col-md-4 col-4">
+                                        <a class="dropdown-item text-center" href="#">
+                                            <img src="images/social/snapchat.png" class="profile-image img-fluid" alt="">
+                                            <span class="d-block">Snapchat</span>
+                                        </a>
+                                    </div>
+
+                                    <div class="col-lg-4 col-md-4 col-4">
+                                        <a class="dropdown-item text-center" href="#">
+                                            <img src="images/social/tiktok.png" class="profile-image img-fluid" alt="">
+                                            <span class="d-block">Tiktok</span>
+                                        </a>
+                                    </div>
+
+                                    <div class="col-lg-4 col-md-4 col-4">
+                                        <a class="dropdown-item text-center" href="#">
+                                            <img src="images/social/youtube.png" class="profile-image img-fluid" alt="">
+                                            <span class="d-block">Youtube</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dropdown px-3">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="45.jpg" class="profile-image img-fluid" alt="">
+                        </a>
+                        <ul class="dropdown-menu bg-white shadow">
+                            <li>
+                                <div class="dropdown-menu-profile-thumb d-flex">
+                                    <img src="45.jpg" class="profile-image img-fluid me-3" alt="">
+
+                                    <div class="d-flex flex-column">
+                                        <small>Thomas</small>
+                                        <a href="#">pjo881072@gmail.com</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="profile.html">
+                                    <i class="bi-person me-2"></i>
+                                    Profile
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="setting.html">
+                                    <i class="bi-gear me-2"></i>
+                                    Settings
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="help-center.html">
+                                    <i class="bi-question-circle me-2"></i>
+                                    Help
+                                </a>
+                            </li>
+
+                            <li class="border-top mt-3 pt-2 mx-4">
+                                <a class="dropdown-item ms-0 me-0" href="#">
+                                    <i class="bi-box-arrow-left me-2"></i>
+                                    Logout
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container-fluid">
+            <div class="row">
+                <nav id="sidebarMenu" class="col-md-3 col-lg-3 d-md-block sidebar collapse">
+                    <div class="position-sticky py-4 px-3 sidebar-sticky">
+                        <ul class="nav flex-column h-100">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="index.html">
+                                    <i class="bi-house-fill me-2"></i>
+                                    Overview
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="wallet.html">
+                                    <i class="bi-wallet me-2"></i>
+                                    My Wallet
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="bonus.html">
+                                    <i class="bi bi-gift me-2"></i>
+                                    Bonus
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="profile.html">
+                                    <i class="bi-person me-2"></i>
+                                    Profile
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="setting.html">
+                                    <i class="bi-gear me-2"></i>
+                                    Settings
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link active" href="help-center.html">
+                                    <i class="bi-question-circle me-2"></i>
+                                    Help Center
+                                </a>
+                            </li>
+
+                            <li class="nav-item featured-box mt-lg-5 mt-4 mb-4">
+                                <img src="rud spian.png" class="img-fluid" alt="">
+
+                                <a class="btn custom-btn" href="bonus.html">Spin</a>
+                            </li>
+
+                            <li class="nav-item border-top mt-auto pt-2">
+                                <a class="nav-link" href="#">
+                                    <i class="bi-box-arrow-left me-2"></i>
+                                    Logout
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <main class="main-wrapper col-md-9 ms-sm-auto py-4 col-lg-9 px-md-4 border-start">
+                    <div class="title-group mb-3">
+                        <h1 class="h2 mb-0">How can we help?</h1>
+                    </div>
+
+                    <div class="row my-4">
+                        <div class="col-lg-7 col-12">
+                            <div class="custom-block bg-white">
+                                <form class="custom-form search-form" action="#" method="post" role="form">
+                                    <div class="row">
+                                        <div class="col-lg-12 mb-2">
+                                            <h6>Search for the topics</h6>
+                                        </div>
+
+                                        <div class="col-lg-8 col-md-8 col-12">
+                                            <input class="form-control mb-lg-0 mb-md-0" name="search" type="text" placeholder="Search" aria-label="Search">
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-4 col-12">
+                                            <button type="submit" class="form-control">
+                                                Submit
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div class="custom-block custom-block-faq">
+                                <h5 class="mb-4">Frequently Asked Questions</h5>
+
+                                <strong class="d-block mb-2">What is What is Market Hub ?</strong>
+
+                                <p>Market Hub is a centralized trading platform designed to connect buyers and sellers, providing a streamlined environment for executing trades across various markets. With advanced tools and an intuitive interface, it caters to both novice and experienced traders, enabling them to optimize their trading strategies.</p>
+                                
+                                <strong class="d-block mt-3 mb-2">What can you access for free in Market Hub?</strong>
+
+                                <p>Market Hub offers a range of free features, including market insights, trade analytics, and basic account functionalities to help traders make informed decisions.</p>
+                                                           
+                                 <strong class="d-block mt-3 mb-2">Why is Market Hub a trustworthy platform?</strong>
+
+                                 <p>Market Hub prioritizes security and transparency, employing robust measures to protect user data and ensuring fair trading practices to build trust within the trading community.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-5 col-12">
+                            <div class="custom-block custom-block-contact">
+                                <h6 class="mb-4">Still can’t find what you looking for?</h6>
+
+                                <p>
+                                    <strong>Call us:</strong>
+                                    <a href="tel: 819-925-6289" class="ms-2">
+                                        +1(819) 
+                                        925-6289
+                                    </a>
+                                </p>
+
+                                <a href="https://wa.me/18199256289?20%im20%" class="btn custom-btn custom-btn-bg-white mt-3">
+                                    Chat with us
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <footer class="site-footer">
+                        <div class="container">
+                            <div class="row">
+                                
+                                <div class="col-lg-12 col-12">
+                                    <p class="copyright-text"> 
+                                    <a rel="sponsored" href="https://www.tooplate.com" target="_blank"></a></p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </footer>
+                </main>
+
+            </div>
+        </div>
+
+
+        <div class="foot">
+            <p class="review">REVIEWS</p>
+                <!-- <marquee behavior="alternate" direction="right"> -->
+                    <div class="rev" style="height: fit-content;">
+                        <p> <img src="RUD1 (3).jpg" class="own" alt=""> <strong style="font-weight: bolder; font-size: 16px;">Sarah_TechTrader (Advanced Trader)</strong> <br>
+                            <span style="font-weight: bolder;">Rating: ★★★★☆ (4.5/5)</span> <br>
+                            "I've been trading on eToro for 3 years now, and it's become one of my favorite platforms.The copy trading<br> 
+                             feature is powerful for generating passive income—I’ve built a small following myself. <br>
+                              The platform is intuitive
+                              and the interface is great on both desktop and mobile. <br>
+                             My only wish is for more advanced charting tools,
+                             similar to what you'd find on MetaTrader or TradingView."</p>
+                    </div>
+                <!-- </marquee> -->
+
+                <!-- <marquee behavior="" direction=""> -->
+                    <div class="rev w-100" style="height: fit-content;">
+                        <p> <img src="RUD1 (2).jpg" class="own" alt=""> 
+                            <strong style="font-weight: bolder; font-size: 16px;">MikeBeginner89 (New Trader)</strong> <br>
+                            <span style="font-weight: bolder;">Rating: ★★★★☆ (4/5)</span> <br>
+                            "As someone who just started learning about stocks and crypto,<br>
+                             Market Hub has been super beginner-friendly. <br>
+                            I love that I can see what other traders are doing and learn from them. <br>
+                            The educational content is decent, 
+                            and setting up my first trade was really easy. <br>
+                            I gave 4 stars because sometimes customer support is a bit slow to respond." <br>
+                        </p>
+                    </div>
+        
+                <!-- </marquee> -->
+
+           <!-- <marquee behavior="alternate" direction="left"> -->
+            <div class="rev w-100" style="height: fit-content;">
+                <p> <img src="RUD1 (5).jpg" class="own" alt=""> 
+                    <strong style="font-weight: bolder; font-size: 16px;">Divya_Invests (Intermediate Trader)</strong> <br>
+                    <span style="font-weight: bolder;">Rating: ★★★★★ (5/5)</span> <br>
+                    "I've used a few platforms before—Robinhood, Webull—but eToro’s community-focused design stands out. <br>
+                    Being able to interact with other traders, comment on their strategies, and follow their portfolios <br>
+                    has helped me fine-tune my approach. The platform also offers a good variety of assets—stocks, <br>
+                     ETFs, crypto—all in one place."                   
+                </p>
+            </div>
+           <!-- </marquee> -->
+           <!-- <marquee behavior="alternate" direction="left"> -->
+            <div class="rev w-100" style="height: fit-content;">
+                <p> <img src="RUD1 (6).jpg" class="own" alt=""> 
+                    <strong style="font-weight: bolder; font-size: 16px;">Quantified_Growth (Quant/Algo Trader)</strong> <br>
+                    <span style="font-weight: bolder;">Rating: ★★★★★ (4/5)</span> <br>
+                    "Market Hub isn't designed for algo traders, <br>
+                     but I still use it for discretionary trades and following global macro investors. <br>
+                     The real-time sentiment tracking through copy portfolios is very helpful. <br>
+                     It's a great platform for long-term investing or social insights, <br>
+                      but not the best for backtesting or automated strategies." <br>    
+                </p>
+            </div>
+           <!-- </marquee> -->
+
+
+
+
+        
+
+
+        </div>
+
+
+        <!-- JAVASCRIPT FILES -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/custom.js"></script>
+
+    </body>
+</html>
