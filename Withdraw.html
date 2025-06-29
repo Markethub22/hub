@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Withdraw Funds</title>
+  <style>
+    body {
+      font-family: Arial;
+      max-width: 400px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+    input, select, button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #e74c3c;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .history {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Withdraw Funds</h2>
+  <h3 id="balance">0.00</h3>
+
+  <label>Select Bank</label>
+  <select id="bank">
+    <option value="PayPal">PayPal</option>
+    <option value="Bank">Bank</option>
+  </select>
+
+  <label>Account Name</label>
+  <input type="text" id="accountName" placeholder="Enter account name" />
+
+  <label>Account Number</label>
+  <input type="text" id="accountNumber" placeholder="Enter account number" />
+
+  <label>Password</label>
+  <input type="password" id="password" placeholder="Enter password" />
+
+  <label>Amount</label>
+  <input type="number" id="amount" placeholder="Enter amount to withdraw" />
+
+  <button onclick="withdraw()">Withdraw</button>
+
+  <div class="history">
+    <h4>Transaction History</h4>
+    <ul id="historyList"></ul>
+  </div>
+
+  <script>
+    let balance = parseFloat(localStorage.getItem("balance")) || 22213448.63;
+    let history = [];
+    const savedHistory = localStorage.getItem("history"); if (savedHistory){history = JSON.parse(savedHistory);}
+
+    const balanceDisplay = document.getElementById("balance");
+    const historyList = document.getElementById("historyList");
+
+    function updateUI() {
+      balanceDisplay.textContent = balance.toLocaleString('en-US',{style:'currency',currency:'USD'});
+      historyList.innerHTML = "";
+      history.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        historyList.appendChild(li);
+      });
+    }
+
+    function withdraw() {
+      const bank = document.getElementById("bank").value;
+      const name = document.getElementById("accountName").value;
+      const number = document.getElementById("accountNumber").value;
+      const password = document.getElementById("password").value;
+      const amount = parseFloat(document.getElementById("amount").value);
+      if (!bank || !name || !number || !password || isNaN(amount)) {
+        alert("Please fill all fields");
+        return;
+      }
+
+      if (amount <= 0 || amount > balance) {
+        alert("Invalid amount");
+        return;
+      }
+
+      balance -= amount;
+        const record = `Withdraw of ${amount.toFixed(2)} have been sent to bank (${name})`; 
+      history.unshift(record);localStorage.setItem("balance",balance);
+      localStorage.setItem("history",JSON.stringify(history));
+      updateUI();
+      alert
+      ("Withdrawal successful! Transaction with take 10 to 20 minutes");
+    }
+
+    updateUI();
+  </script>
+
+</body>
+</html>      
